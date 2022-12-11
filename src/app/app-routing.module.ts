@@ -12,7 +12,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'itens/editar/:id',
+    path: 'itens/cadastrar',
     loadChildren: () =>
       import('./item/item-cadastrar-editar/item-cadastrar-editar.module').then(
         (modulo) => modulo.ItemCadastrarEditarModule
@@ -26,6 +26,7 @@ const routes: Routes = [
       ),
   },
 ];
+
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

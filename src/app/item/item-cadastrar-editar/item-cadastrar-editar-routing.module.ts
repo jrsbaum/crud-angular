@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ItemCadastrarEditarComponent } from './item-cadastrar-editar/item-cadastrar-editar.component';
+import { ItemResolverService } from './item-resolver.service';
 
 const routes: Routes = [
   {
     path: '',
     component: ItemCadastrarEditarComponent,
+    resolve: {
+      item: ItemResolverService,
+    },
   },
 ];
 
