@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
@@ -11,8 +11,21 @@ const routes: Routes = [
         (modulo) => modulo.ItemListarModule
       ),
   },
+  {
+    path: 'itens/editar/:id',
+    loadChildren: () =>
+      import('./item/item-cadastrar-editar/item-cadastrar-editar.module').then(
+        (modulo) => modulo.ItemCadastrarEditarModule
+      ),
+  },
+  {
+    path: 'itens/editar/:id',
+    loadChildren: () =>
+      import('./item/item-cadastrar-editar/item-cadastrar-editar.module').then(
+        (modulo) => modulo.ItemCadastrarEditarModule
+      ),
+  },
 ];
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

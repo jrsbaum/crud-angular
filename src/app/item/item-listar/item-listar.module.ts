@@ -4,14 +4,22 @@ import { CommonModule } from '@angular/common';
 import { ItemListarRoutingModule } from './item-listar-routing.module';
 import { ItemListarComponent } from './item-listar/item-listar.component';
 
+import { MatTableModule } from '@angular/material/table';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 @NgModule({
-  declarations: [
-    ItemListarComponent
-  ],
+  declarations: [ItemListarComponent],
   imports: [
     CommonModule,
-    ItemListarRoutingModule
-  ]
+    ItemListarRoutingModule,
+    MatTableModule,
+    MatProgressSpinnerModule,
+    MatToolbarModule,
+    MatButtonModule,
+    MatPaginatorModule,
+  ],
 })
-export class ItemListarModule { }
+export class ItemListarModule {}
