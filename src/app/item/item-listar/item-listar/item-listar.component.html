@@ -28,7 +28,7 @@
             <ng-container matColumnDef="preco">
                 <th mat-header-cell *matHeaderCellDef> Preço </th>
                 <td mat-cell *matCellDef="let item">
-                    <a routerLink="/itens/editar/{{item.id}}"> {{item.preco}}</a>
+                    <a routerLink="/itens/editar/{{item.id}}"> R$ {{item.preco}}</a>
                 </td>
             </ng-container>
             <tr mat-header-row *matHeaderRowDef="colunasTabela"></tr>
