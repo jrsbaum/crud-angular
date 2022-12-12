@@ -11,7 +11,7 @@ import { Item } from '../../item.model';
 export class ItemListarComponent implements OnInit {
   itens$: Observable<Item[]> | undefined;
 
-  colunasTabela = ['id', 'nome'];
+  colunasTabela = ['id', 'nome', 'descricao', 'preco'];
 
   constructor(private itemService: ItemService) {}
 

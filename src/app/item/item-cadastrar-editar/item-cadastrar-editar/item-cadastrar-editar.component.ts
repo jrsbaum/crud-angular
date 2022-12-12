@@ -28,6 +28,14 @@ export class ItemCadastrarEditarComponent implements OnInit {
         this.item && this.item.nome ? this.item.nome : '',
         Validators.required,
       ],
+      descricao: [
+        this.item && this.item.descricao ? this.item.descricao : '',
+        Validators.required,
+      ],
+      preco: [
+        this.item && this.item.preco ? this.item.preco : '',
+        Validators.required,
+      ],
     });
   }
 

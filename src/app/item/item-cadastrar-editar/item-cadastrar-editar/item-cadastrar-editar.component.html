@@ -7,6 +7,17 @@
             <input matInput placeholder="Nome" formControlName="nome" required autocomplete="off">
             <mat-error>Campo é obrigatório</mat-error>
         </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Descrição" formControlName="descricao" required autocomplete="off">
+            <mat-error>Campo é obrigatório</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <input matInput placeholder="Preço" formControlName="preco" required autocomplete="off">
+            <mat-error>Campo é obrigatório</mat-error>
+        </mat-form-field>
+
+
+
         <div class="linha-botoes">
             <button mat-raised-button color="primary" [disabled]="!formGroup.valid">Salvar</button>
             <button *ngIf="item && item.id" type="button" color="warn" mat-raised-button
