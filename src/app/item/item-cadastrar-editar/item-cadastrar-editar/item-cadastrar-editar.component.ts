@@ -34,7 +34,7 @@ export class ItemCadastrarEditarComponent implements OnInit {
   salvar() {
     if (this.item && this.item.id) {
       this.itemService.atualizar(this.formGroup.value).subscribe({
-        next: (itemAtualizado) => {
+        next: () => {
           this.router.navigateByUrl('/itens');
         },
         error: (error) => {
@@ -43,7 +43,7 @@ export class ItemCadastrarEditarComponent implements OnInit {
       });
     } else {
       this.itemService.cadastrar(this.formGroup.value).subscribe({
-        next: (itemCadastrado) => {
+        next: () => {
           this.router.navigateByUrl('/itens');
         },
         error: (error) => {
@@ -56,7 +56,7 @@ export class ItemCadastrarEditarComponent implements OnInit {
   deletar() {
     if (confirm('Deseja deletar o item ' + this.item.nome)) {
       this.itemService.deletar(this.item).subscribe({
-        next: (response) => {
+        next: () => {
           this.router.navigateByUrl('/itens');
         },
         error: (error) => {
