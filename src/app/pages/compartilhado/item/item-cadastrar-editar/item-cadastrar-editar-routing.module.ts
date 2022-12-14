@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ItemCadastrarEditarComponent } from './item-cadastrar-editar/item-cadastrar-editar.component';
-import { ItemResolverService } from './item-resolver.service';
+import { ItemResolverService } from '../../../../services/item/item-resolver.service';
 
 const routes: Routes = [
   {

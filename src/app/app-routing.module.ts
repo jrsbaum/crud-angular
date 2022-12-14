@@ -1,36 +1,36 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { LoginComponent } from './login/login.component';
+import { MainNavComponent } from './pages/compartilhado/main-nav/main-nav.component';
+import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: LoginComponent },
-  { path: '', component: HomeComponent },
+  { path: 'login', component: LoginComponent },
+  {
+    path: '',
+    component: MainNavComponent,
+    children: [{ path: '', component: HomeComponent }],
+  },
   {
     path: 'itens',
     loadChildren: () =>
-      import('./item/item-listar/item-listar.module').then(
+      import('./pages/compartilhado/item/item-listar/item-listar.module').then(
         (modulo) => modulo.ItemListarModule
       ),
   },
   {
-    path: 'login',
-    loadChildren: () =>
-      import('./login/login.module').then((modulo) => modulo.LoginModule),
-  },
-  {
     path: 'itens/cadastrar',
     loadChildren: () =>
-      import('./item/item-cadastrar-editar/item-cadastrar-editar.module').then(
-        (modulo) => modulo.ItemCadastrarEditarModule
-      ),
+      import(
+        './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
+      ).then((modulo) => modulo.ItemCadastrarEditarModule),
   },
   {
     path: 'itens/editar/:id',
     loadChildren: () =>
-      import('./item/item-cadastrar-editar/item-cadastrar-editar.module').then(
-        (modulo) => modulo.ItemCadastrarEditarModule
-      ),
+      import(
+        './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
+      ).then((modulo) => modulo.ItemCadastrarEditarModule),
   },
 ];
 

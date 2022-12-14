@@ -1,0 +1,13 @@
+.gradient-custom {
+  background: #e4b20e;
+  background: -webkit-linear-gradient(
+    to right,
+    rgb(224, 168, 12),
+    rgb(129, 167, 233)
+  );
+  background: linear-gradient(to right, rgb(224, 168, 12), rgb(129, 167, 233));
+}
+
+.formlabel {
+  font-weight: bold;
+}
