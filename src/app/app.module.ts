@@ -14,9 +14,12 @@ import { MatListModule } from '@angular/material/list';
 import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginModule } from './login/login.module';
 
 @NgModule({
   declarations: [AppComponent, MainNavComponent, HomeComponent],
+  providers: [],
+  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -29,8 +32,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MatListModule,
     HttpClientModule,
     NgbModule,
+    LoginModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent],
 })
 export class AppModule {}
