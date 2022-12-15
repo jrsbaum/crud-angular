@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
-import { ItemService } from '../../../../../services/item/item.service';
+import { ItemService } from '../../../../../services/item.service';
 import { Router, ActivatedRoute } from '@angular/router';
-import { Item } from '../../../../../interfaces/item.model';
+import { Item } from '../../../../../interfaces/IItem';
 
 @Component({
   selector: 'app-item-cadastrar-editar',

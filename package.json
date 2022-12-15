@@ -25,6 +25,7 @@
     "@types/jest": "^29.2.4",
     "@types/mocha": "^10.0.1",
     "bootstrap": "^5.2.3",
+    "enviroment": "^1.0.0",
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
