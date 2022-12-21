@@ -10,5 +10,10 @@
 }
 .card-login {
   width: 300px;
+  background-color: rgba(226, 188, 188, 0.253);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+}
+.mat-mdc-card-title {
+  padding: 0.5rem;
+  text-align: left;
 }
