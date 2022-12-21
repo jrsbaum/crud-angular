@@ -9,7 +9,7 @@ import { UsuarioService } from '../../services/usuario.service';
   styleUrls: ['./login.component.scss'],
 })
 export class LoginComponent implements OnInit {
-  formLogin: FormGroup; //codereview: tirar esse any pelo amor de Deus
+  formLogin: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
     private usuarioService: UsuarioService,
