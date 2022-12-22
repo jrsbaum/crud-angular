@@ -5,6 +5,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsuarioAutenticadoGuard } from './services/guards/usuario-autenticado.guard';
 import { UsuarioNaoAutenticadoGuard } from './services/guards/usuario-nao-autenticado.guard';
+import { ItemListarModule } from './pages/compartilhado/item/item-listar/item-listar.module';
+import { ItemCadastrarEditarComponent } from './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar/item-cadastrar-editar.component';
+import { ItemCadastrarEditarModule } from './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module';
 
 const routes: Routes = [
   {
@@ -16,28 +19,30 @@ const routes: Routes = [
     path: '',
     component: MainNavComponent,
     canActivate: [UsuarioAutenticadoGuard],
-    children: [{ path: '', component: HomeComponent }],
-  },
-  {
-    path: 'itens',
-    loadChildren: () =>
-      import('./pages/compartilhado/item/item-listar/item-listar.module').then(
-        (modulo) => modulo.ItemListarModule
-      ),
-  },
-  {
-    path: 'itens/cadastrar',
-    loadChildren: () =>
-      import(
-        './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
-      ).then((modulo) => modulo.ItemCadastrarEditarModule),
-  },
-  {
-    path: 'itens/editar/:id',
-    loadChildren: () =>
-      import(
-        './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
-      ).then((modulo) => modulo.ItemCadastrarEditarModule),
+    children: [
+      { path: '', component: HomeComponent },
+      {
+        path: 'itens',
+        loadChildren: () =>
+          import(
+            './pages/compartilhado/item/item-listar/item-listar.module'
+          ).then((modulo) => modulo.ItemListarModule),
+      },
+      {
+        path: 'itens/cadastrar',
+        loadChildren: () =>
+          import(
+            './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
+          ).then((modulo) => modulo.ItemCadastrarEditarModule),
+      },
+      {
+        path: 'itens/editar/:id',
+        loadChildren: () =>
+          import(
+            './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module'
+          ).then((modulo) => modulo.ItemCadastrarEditarModule),
+      },
+    ],
   },
 ];
 

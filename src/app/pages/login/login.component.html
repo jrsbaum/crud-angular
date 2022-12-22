@@ -6,17 +6,17 @@
         <mat-form-field appearance="outline" class="form-field-full">
           <mat-label>Email</mat-label>
           <input type="email" matInput formControlName="email" placeholder="abc@email.com" style="text-align: center">
-          <mat-error *ngIf="formLogin.get('email')!.hasError('email') && formLogin.get('email')!.touched">
+          <mat-error *ngIf="formLogin.get('email')?.hasError('email') && formLogin.get('email')?.touched">
             Por favor informe um email válido
           </mat-error>
-          <mat-error *ngIf="formLogin.get('email')!.hasError('required') && formLogin.get('email')!.touched">
+          <mat-error *ngIf="formLogin.get('email')?.hasError('required') && formLogin.get('email')?.touched">
             Email é <strong>obrigatório</strong>
           </mat-error>
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field-full">
           <mat-label>Senha</mat-label>
           <input type="password" matInput formControlName="senha">
-          <mat-error *ngIf="formLogin.get('senha')!.invalid && formLogin.get('senha')!.touched">Senha é
+          <mat-error *ngIf="formLogin.get('senha')?.invalid && formLogin.get('senha')?.touched">Senha é
             <strong>obrigatória</strong>
           </mat-error>
         </mat-form-field>

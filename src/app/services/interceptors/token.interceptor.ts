@@ -26,7 +26,7 @@ export class TokenInterceptor implements HttpInterceptor {
             if (count <= retryCount && error.status == 503) {
               return of(error);
             }
-            return throwError(error);
+            return throwError(() => new Error(error));
           }),
           delay(retryWaitMilliSeconds)
         )
