@@ -5,9 +5,6 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsuarioAutenticadoGuard } from './services/guards/usuario-autenticado.guard';
 import { UsuarioNaoAutenticadoGuard } from './services/guards/usuario-nao-autenticado.guard';
-import { ItemListarModule } from './pages/compartilhado/item/item-listar/item-listar.module';
-import { ItemCadastrarEditarComponent } from './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar/item-cadastrar-editar.component';
-import { ItemCadastrarEditarModule } from './pages/compartilhado/item/item-cadastrar-editar/item-cadastrar-editar.module';
 
 const routes: Routes = [
   {

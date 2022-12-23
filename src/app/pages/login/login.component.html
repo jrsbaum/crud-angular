@@ -5,7 +5,8 @@
       <mat-card-content class="conteudo-login">
         <mat-form-field appearance="outline" class="form-field-full">
           <mat-label>Email</mat-label>
-          <input type="email" matInput formControlName="email" placeholder="abc@email.com" style="text-align: center">
+          <input type="email" class="rounded" matInput formControlName="email" placeholder="abc@email.com"
+            style="text-align: center">
           <mat-error *ngIf="formLogin.get('email')?.hasError('email') && formLogin.get('email')?.touched">
             Por favor informe um email válido
           </mat-error>
@@ -15,7 +16,8 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field-full">
           <mat-label>Senha</mat-label>
-          <input type="password" matInput formControlName="senha">
+          <input type="password" class="rounded" matInput placeholder="********" formControlName="senha"
+            style="text-align: center">
           <mat-error *ngIf="formLogin.get('senha')?.invalid && formLogin.get('senha')?.touched">Senha é
             <strong>obrigatória</strong>
           </mat-error>
@@ -23,7 +25,7 @@
       </mat-card-content>
     </form>
     <mat-card-actions align="end">
-      <button mat-button color="primary" class="full" align="end" (click)="logar()">Entrar</button>
+      <button mat-button color="primary" class="full rounded" align="end" (click)="logar()">Entrar</button>
     </mat-card-actions>
   </mat-card>
 </mat-card-content>
