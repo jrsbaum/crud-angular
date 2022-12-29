@@ -16,7 +16,7 @@
         </mat-form-field>
         <mat-form-field appearance="outline" class="form-field-full">
           <mat-label>Senha</mat-label>
-          <input type="password" class="rounded" matInput placeholder="********" formControlName="senha"
+          <input type="password" autocomplete="on" class="rounded" matInput placeholder="******" formControlName="senha"
             style="text-align: center">
           <mat-error *ngIf="formLogin.get('senha')?.invalid && formLogin.get('senha')?.touched">Senha é
             <strong>obrigatória</strong>

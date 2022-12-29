@@ -34,7 +34,7 @@ export class UsuarioService {
   }
   private mockUsuarioLogin(usuario: IUsuario): Observable<any> {
     var retornoMock: any = [];
-    if (usuario.email === 'user@jrsbaum.com' && usuario.senha == '123') {
+    if (usuario.email === 'user@email.com' && usuario.senha == '12345') {
       retornoMock.sucesso = true;
       retornoMock.usuario = usuario;
       retornoMock.token = 'TokenQueSeriaGeradoPelaAPI';
