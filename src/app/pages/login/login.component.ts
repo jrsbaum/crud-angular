@@ -33,7 +33,7 @@ export class LoginComponent implements OnInit {
           'Falha na autenticação',
           'Usuário ou senha incorretos.',
           {
-            duration: 3000,
+            duration: 5000,
           }
         );
       }

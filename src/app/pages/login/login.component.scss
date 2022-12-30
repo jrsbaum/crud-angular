@@ -12,20 +12,6 @@
 .card-login {
   width: 300px;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
-  background: linear-gradient(45deg, #8ecae6, #219ebc, #ffb703, #fb8500);
-  background-size: 300% 300%;
-  animation: colors 60s ease infinite;
-}
-@keyframes colors {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
 }
 .mat-mdc-card-title {
   align-items: center;

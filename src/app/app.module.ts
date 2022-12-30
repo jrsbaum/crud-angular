@@ -5,7 +5,6 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MainNavComponent } from './pages/compartilhado/main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -13,21 +12,23 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './pages/home/home.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LoginModule } from './pages/login/login.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { TokenInterceptor } from './services/interceptors/token.interceptor';
+import { HomeComponent } from './pages/home/home.component';
+import { MainNavComponent } from './pages/main-nav/main-nav.component';
 
 @NgModule({
-  declarations: [AppComponent, MainNavComponent, HomeComponent],
+  declarations: [AppComponent, HomeComponent, MainNavComponent],
+  bootstrap: [AppComponent],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true },
   ],
-  bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -36,7 +37,6 @@ import { TokenInterceptor } from './services/interceptors/token.interceptor';
     FormsModule,
     LayoutModule,
     ReactiveFormsModule,
-
     MatFormFieldModule,
     MatCardModule,
     MatInputModule,
@@ -47,7 +47,7 @@ import { TokenInterceptor } from './services/interceptors/token.interceptor';
     MatIconModule,
     MatListModule,
     MatSnackBarModule,
-
+    MatExpansionModule,
     NgbModule,
     LoginModule,
   ],
