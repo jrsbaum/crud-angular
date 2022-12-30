@@ -1,8 +1,11 @@
 # MyCrudApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.3.
+I made this project to learn how a CRUD works. For educational purposes only, I used a fake REST API to simulate my backend.
+As I learn about how Angular works, I add things to it.
 
 ## Install JSON-Server
+
 Run `npm install -g json-server` <br>
 Create file db.json <br>
 Start JSON-Server with `json-server --watch db.json`
