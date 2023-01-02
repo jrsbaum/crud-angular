@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UsuarioAutenticadoGuard } from './services/guards/usuario-autenticado.guard';
 import { UsuarioNaoAutenticadoGuard } from './services/guards/usuario-nao-autenticado.guard';
+import { MainNavComponent } from './pages/main-nav/main-nav.component';
 
 const routes: Routes = [
   {
@@ -13,7 +13,13 @@ const routes: Routes = [
   },
   {
     path: '',
-    component: HomeComponent,
+    component: MainNavComponent,
+    canActivate: [UsuarioAutenticadoGuard],
+  },
+  {
+    path: 'home',
+    loadChildren: () =>
+      import('./pages/home/home.module').then((modulo) => modulo.HomeModule),
     canActivate: [UsuarioAutenticadoGuard],
   },
   {
