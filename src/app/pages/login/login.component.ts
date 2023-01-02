@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { IUsuario } from '../../interfaces/IUsuario';
 import { UsuarioService } from '../../services/usuario.service';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -15,15 +16,18 @@ export class LoginComponent implements OnInit {
     private usuarioService: UsuarioService,
     private snackBar: MatSnackBar
   ) {}
+
   ngOnInit(): void {
     this.criarForm();
   }
+
   criarForm() {
     this.formLogin = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       senha: ['', [Validators.required]],
     });
   }
+
   logar() {
     if (this.formLogin.invalid) return;
     var usuario = this.formLogin.getRawValue() as IUsuario;
