@@ -1,32 +1,35 @@
-<mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>SIDENAV BOMBANDO MALUCO</p>
-
-
-    <button [routerLink]="'/itens'"> Itens</button>
-  </mat-drawer>
-
-  <div class="example-sidenav-content">
-    <button mat-icon-button (click)="drawer.toggle()">
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" aria-label="Botão toggle abre menu lateral">
       <mat-icon>toc</mat-icon>
-
     </button>
+
     <div class="espacamento-toolbar"></div>
     <button mat-icon-button (click)="deslogar()" aria-label="Botão para deslogar">
       <mat-icon>logout</mat-icon>
-
-
     </button>
+  </mat-toolbar-row>
+</mat-toolbar>
 
-  </div>
-  <div class="conteudo-central">
+<mat-sidenav-container>a
+  <mat-sidenav #sidenav>
+    <mat-nav-list>
+
+      <a mat-list-item [routerLink]="'/home'"> Home </a>
+      <a mat-list-item [routerLink]="'/itens'"> Itens </a>
 
 
-  </div>
-</mat-drawer-container>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <div style="height: 92vh;">
 
+      <router-outlet>
 
-
+      </router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>
 
 
 

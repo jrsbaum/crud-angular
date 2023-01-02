@@ -7,7 +7,6 @@ import { UsuarioService } from 'src/app/services/usuario.service';
   styleUrls: ['./main-nav.component.scss'],
 })
 export class MainNavComponent {
-  showFiller = false;
   constructor(private usuarioService: UsuarioService) {}
 
   deslogar() {

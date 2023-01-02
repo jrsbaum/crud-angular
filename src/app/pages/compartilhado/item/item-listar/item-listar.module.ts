@@ -19,5 +19,6 @@ import { MatButtonModule } from '@angular/material/button';
     MatToolbarModule,
     MatButtonModule,
   ],
+  exports: [ItemListarComponent],
 })
 export class ItemListarModule {}
