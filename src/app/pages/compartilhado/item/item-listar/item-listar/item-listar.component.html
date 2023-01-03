@@ -4,7 +4,7 @@
   <mat-spinner></mat-spinner>
 </ng-template>
 
-<div class="componente-container">
+<div class="componente-container" #itens>
   <div *ngIf="itens$ | async as itens; else carregando">
     <table mat-table [dataSource]="itens">
       <ng-container matColumnDef="id">

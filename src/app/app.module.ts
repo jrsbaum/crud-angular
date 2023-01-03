@@ -22,6 +22,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { TokenInterceptor } from './services/interceptors/token.interceptor';
 import { HomeComponent } from './pages/home/home.component';
 import { MainNavComponent } from './pages/main-nav/main-nav.component';
+import { ItemListarModule } from './pages/compartilhado/item/item-listar/item-listar.module';
 
 @NgModule({
   declarations: [AppComponent, HomeComponent, MainNavComponent],
@@ -50,6 +51,7 @@ import { MainNavComponent } from './pages/main-nav/main-nav.component';
     MatExpansionModule,
     NgbModule,
     LoginModule,
+    ItemListarModule,
   ],
 })
 export class AppModule {}
