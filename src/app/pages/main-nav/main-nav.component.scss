@@ -2,20 +2,19 @@ button {
   margin: 2rem;
 }
 
-.example-container {
+.mat-sidenav-container {
   width: 100vw;
-  height: 50vh;
-  border: 1px solid rgba(0, 0, 0, 0.5);
+  height: 86vh;
 }
 
-.example-sidenav-content {
+.mat-sidenav-content {
   display: flex;
-  height: 100%;
   align-items: center;
   justify-content: center;
+  padding: 1rem;
 }
 
-.example-sidenav {
+.mat-sidenav {
   padding: 20px;
 }
 

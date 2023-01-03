@@ -1,17 +1,18 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <button mat-icon-button class="example-icon" (click)="sidenav.toggle()" aria-label="Botão toggle abre menu lateral">
+    <button mat-icon-button class="icon" (click)="sidenav.toggle()" abbr title="Abre menu lateral"
+      aria-label="Botão toggle abre menu lateral">
       <mat-icon>toc</mat-icon>
     </button>
-
+    <div> My Crud App</div>
     <div class="espacamento-toolbar"></div>
-    <button mat-icon-button (click)="deslogar()" aria-label="Botão para deslogar">
+    <button mat-icon-button (click)="deslogar()" abbr title="Logout" aria-label="Botão para deslogar">
       <mat-icon>logout</mat-icon>
     </button>
   </mat-toolbar-row>
 </mat-toolbar>
 
-<mat-sidenav-container>a
+<mat-sidenav-container>
   <mat-sidenav #sidenav>
     <mat-nav-list>
 
@@ -22,10 +23,9 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <div style="height: 92vh;">
-
+    <div>
       <router-outlet>
-
+        content here
       </router-outlet>
     </div>
   </mat-sidenav-content>
