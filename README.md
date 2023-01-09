@@ -6,7 +6,7 @@ As I learn about how Angular works, I add things to it.
 
 ## Install JSON-Server
 
-Run `npm install -g json-server` <br>
+Run `npm install json-server` <br>
 Create file db.json <br>
 Start JSON-Server with `json-server --watch db.json`
 
